@@ -10,7 +10,7 @@ Get foreign exchange rate and send to your LINE every day
 
 1. Register LINE Messaging API on LINE developers, then get access token of LINE Messaging API channel
 https://developers.line.me/
-2. Setup HTTPS environment by installing Apache + PHP + SQLite + SSL cert(by Let's encrypt, ..., etc.)
+2. Setup HTTPS environment by installing Apache + PHP + SQLite + SSL cert(by Let's encrypt, ..., etc.) on Ubuntu 16.04
 3. Clone this project and make your Apache to access "ForeignEX/web" as HTTPS root folder
 4. Install dependent libraries and tools
 ```text
@@ -65,6 +65,11 @@ php worker.php
 ```
 
 12. Use crontab to run worker.php every day
+```text
+shiun@instance-1:$ sudo vi /etc/crontab
+# Add the following contents
+00 2    * * *   user   php /var/www/linebottest/worker.php
+```
 
 ## Reference
 1. My blog: [LINE BOT 匯率提醒機器人(1/3) － 使用GCP架設Linux server](https://blog.alenshiun.tw/2018/10/line-bot-13-gcplinux-server.html)
