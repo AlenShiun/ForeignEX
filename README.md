@@ -66,3 +66,7 @@ php worker.php
 
 12. Use crontab to run worker.php every day
 
+## Reference
+1. My blog: [LINE BOT 匯率提醒機器人(1/3) － 使用GCP架設Linux server](https://blog.alenshiun.tw/2018/10/line-bot-13-gcplinux-server.html)
+2. [LINE developers console](https://developers.line.me)
+3. PHP Chart library: [pChart 2.0](http://www.pchart.net/)
