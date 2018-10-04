@@ -38,10 +38,10 @@ define("LINE_MESSAGE_API_ACCESS_TOKEN", 'YOUR_ACCESS_TOKEN_HERE');
 ```text
 define('IMAGE_HTTP_PATH_BASE_RATE', "https://your_domain/pic");
 // For example
- define('IMAGE_HTTP_PATH_BASE_RATE', "https://linebottest.alenshiun.tw/pic");
+define('IMAGE_HTTP_PATH_BASE_RATE', "https://linebottest.alenshiun.tw/pic");
 ```
 
-7. Check file permission of this project! This project will access "db" and "log" foler, please check "www-data" or "nginx" have permission to read/write "db" and "log" folder
+8. Check file permission of this project! This project will access "db" and "log" foler, please check "www-data" or "nginx" have permission to read/write "db" and "log" folder
 ```text
 $ sudo chown -R www-data:www-data db
 $ sudo chmod -R 755 db
@@ -49,8 +49,8 @@ $ sudo chown -R www-data:www-data log
 $ sudo chmod -R 755 log
 ```
 
-8. Invite LINE bot into your chat room or group room
-9. Check line_id has been added to DB after invited LINE bot into room, for example:
+9. Invite LINE bot into your chat room or group room
+10. Check line_id has been added to DB after invited LINE bot into room, for example:
 ```text
 $ sqlite3 db/db.sqlite
 sqlite> .tables
@@ -59,10 +59,10 @@ sqlite> SELECT * FROM target;
 1|C6318xxxxxxxxxxxxxxxxxxxxxxxx5946|FOREIGN_EX_DB_TYPE_GROUP|2018-09-25 04:40:47|
 ```
 
-10. Run worker.php from command line
+11. Run worker.php from command line
 ```text
 php worker.php
 ```
 
-11. Use crontab to run worker.php every day
+12. Use crontab to run worker.php every day
 
